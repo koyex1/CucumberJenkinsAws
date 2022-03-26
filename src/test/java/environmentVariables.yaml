@@ -1,0 +1,10 @@
+environment: 
+  Testing Env:
+     first URL: 'www.jj.com'
+     Second URL: 'www.kkk.com'
+variables:
+     firstName: 'Olumide Koyenikan'
+     key: 'kfjjsdkj9303hds'
+   
+elements:
+     'login Button': '//div[@title ="dance"]'  

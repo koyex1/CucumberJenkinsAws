@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="StepDefinitions.StepDefinitions">
+        <methods>
+          <include name="i_visit_google"/>
+          <include name="i_fill_searchbox_with_value_name"/>
+          <include name="browser"/>
+          <include name="searchresult_should_be_shown"/>
+          <include name="i_press_enter"/>
+        </methods>
+      </class> <!-- StepDefinitions.StepDefinitions -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
