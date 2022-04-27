@@ -13,4 +13,5 @@ variables:
      key: 'kfjjsdkj9303hds'
    
 elements:
-     'login Button': '//div[@title ="dance"]'  
+     'login Button': '//div[@title ="dance"]'
+     'Div element field': '//div'
