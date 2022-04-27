@@ -1,6 +1,8 @@
 package StepDefinitions;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -19,7 +21,7 @@ public class StepDefined {
 		WebElement searchField;
 		
 		//Implicit wait of 60 seconds for all elements
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
 		driver.get("https://google.com");
 		driver.manage().window().maximize();

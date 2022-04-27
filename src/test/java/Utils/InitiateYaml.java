@@ -23,7 +23,6 @@ public class InitiateYaml {
 		
 		for(String key: envKeys) {
 			if(data.get(key) instanceof String ) {
-				System.out.println("if");
 				return (String) data.get(key);
 				
 			}
@@ -31,7 +30,6 @@ public class InitiateYaml {
 				return data.get(key).toString();
 			}
 			else {
-				System.out.println("Else");
 				data=  (Map<String, Object>) data.get(key);
 			}
 		}

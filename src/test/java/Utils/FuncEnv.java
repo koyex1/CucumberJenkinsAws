@@ -1,7 +1,9 @@
 package Utils;
 
+import java.util.Random;
+
 public class FuncEnv {
-	public String generationOfRandomNames(int numberOfCharacters) {
+	public String generateRandomStrings(int numberOfCharacters) {
 		int min = 0;
 		int max = 25;
 		StringBuilder str = new StringBuilder();
@@ -14,6 +16,12 @@ public class FuncEnv {
 		}
 		System.out.println(str);
 		return str.toString();
+
+	}
+	
+	public int generateRandomNumbers(int upperbound) {
+		Random rand = new Random();
+		return rand.nextInt(upperbound+1);
 
 	}
 }

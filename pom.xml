@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.olu</groupId>
 	<artifactId>AutomationTest</artifactId>
@@ -6,8 +8,40 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.6</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
+
 
 		<dependency>
 			<groupId>com.sun</groupId>
@@ -36,6 +70,14 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>6.9.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber6-jvm -->
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber6-jvm -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-cucumber6-jvm</artifactId>
+			<version>2.13.6</version>
+		</dependency>
+
 
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
@@ -51,14 +93,6 @@
 			<artifactId>testng</artifactId>
 			<version>7.3.0</version>
 			<scope>test</scope>
-		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v97 -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-devtools-v97</artifactId>
-			<version>4.1.2</version>
 		</dependency>
 
 
@@ -91,6 +125,14 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.1.0</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v97 -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-devtools-v97</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
 		<dependency>
 			<groupId>org.yaml</groupId>
@@ -98,8 +140,87 @@
 			<version>1.30</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.4.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<version>1.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.9</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.17.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.sdrss/reportng -->
+		<dependency>
+			<groupId>com.github.sdrss</groupId>
+			<artifactId>reportng</artifactId>
+			<version>2.6.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/com.jayway.jsonpath -->
+		<!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+
 
 	</dependencies>
 
+	<build>
+		<plugins>
+
+
+			<!-- ................................. -->
+			<plugin>
+				<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.11.2</version>
+				<configuration>
+					<systemPropertyVariables>
+						<allure.results.directory>
+							C:/Users/olu/eclipse-workspace/AutomationTest/allure-results</allure.results.directory>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
 
 </project>
+

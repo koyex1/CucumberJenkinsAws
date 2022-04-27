@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: Runner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.656 sec
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.433 s <<< FAILURE! - in Runner.TestRunner
+runScenario(Runner.TestRunner)  Time elapsed: 5.02 s  <<< FAILURE!
+com.jayway.jsonpath.PathNotFoundException: Filter: [0]['firstName'] can only be applied to arrays. Current context is: {}
+
+runScenario(Runner.TestRunner)  Time elapsed: 0.808 s  <<< FAILURE!
+com.jayway.jsonpath.PathNotFoundException: Filter: [0]['firstName'] can only be applied to arrays. Current context is: {}
+

@@ -3,6 +3,8 @@ package Utils;
 import java.io.FileNotFoundException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +21,12 @@ public class MainLook {
 		//test2.initialization();
 		//genRandVar.getClass().getDeclaredMethod("generationOfRandomNames", null);
 		//String f = new FileDownloader().downloadImage("https://demo.imacros.net/Content/Download.zip");
-	}
+		
+		//Pattern p = Pattern.compile("p*");
+		//Matcher m = p.matcher("https://demo.alitools.com/");
+		//String arL="" ;
+		//System.out.println(m.find());
 
+}
+	
 }
