@@ -48,7 +48,8 @@
 			<artifactId>tools</artifactId>
 			<version>1.6</version>
 			<scope>system</scope>
-			<systemPath>C:\Program Files\Java\jdk1.8.0_321\lib\tools.jar</systemPath>
+			<systemPath>C:\Program Files\Java\jdk1.8.0_321\lib\tools.jar
+			</systemPath>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
@@ -203,6 +204,13 @@
 
 	<build>
 		<plugins>
+			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+			</plugin>
+
 
 
 			<!-- ................................. -->
@@ -214,7 +222,8 @@
 				<configuration>
 					<systemPropertyVariables>
 						<allure.results.directory>
-							C:/Users/olu/eclipse-workspace/AutomationTest/allure-results</allure.results.directory>
+							C:/Users/olu/eclipse-workspace/AutomationTest/allure-results
+						</allure.results.directory>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
