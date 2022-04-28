@@ -3,13 +3,38 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RunnerStarter.TestRunner">
+      <class name="StepDefinitions.BrowserStepDefinitions">
         <methods>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-          <include name="setUpClass"/>
+          <include name="i_record_attribute_name_value_in_variable"/>
+          <include name="i_set_slide_to"/>
+          <include name="i_click_on_element_until_element2_is_shown"/>
+          <include name="printLog"/>
+          <include name="page_title_should_be_shown"/>
+          <include name="i_press_enter"/>
+          <include name="searchresult_should_be_shown"/>
+          <include name="i_tick_checkbox"/>
+          <include name="i_close_window_windowName"/>
+          <include name="i_visit_url_in_window_identified_by_name"/>
+          <include name="i_count_elements_as_count"/>
+          <include name="i_download_file_from"/>
+          <include name="i_scroll_to_element"/>
+          <include name="download_shoould_be_successful"/>
+          <include name="elements_should_contain_regex_value"/>
+          <include name="elements_should_equals_value"/>
+          <include name="i_store_its_content_in_var"/>
+          <include name="i_click"/>
+          <include name="i_fill_searchbox_with_value_name"/>
+          <include name="closingSetup"/>
+          <include name="variable_x_is_y"/>
+          <include name="elements_should_contain_value"/>
+          <include name="i_switch_to_windowName"/>
+          <include name="i_upload_file_to"/>
+          <include name="i_drag_and_drop"/>
+          <include name="url_should_be_shown"/>
+          <include name="i_wait_for_seconds"/>
+          <include name="browser"/>
         </methods>
-      </class> <!-- RunnerStarter.TestRunner -->
+      </class> <!-- StepDefinitions.BrowserStepDefinitions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

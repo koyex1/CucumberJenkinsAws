@@ -1,9 +1,10 @@
 StepDefinitions\DTO.class
+RunnerStarter\TestRunners.class
 Utils\MainLook.class
+Utils\CucumberFailureResult.class
 StepDefinitions\StepDefined.class
 StepDefinitions\Experiments.class
 Runner\SprApp.class
-StepDefinitions\Listeners.class
 Utils\Algorithms.class
 StepDefinitions\DataBaseStepDefinition.class
 Utils\InitiateYaml.class
@@ -11,9 +12,11 @@ StepDefinitions\BrowserStepDefinitions.class
 Utils\FuncEnv.class
 Utils\PrintMessages.class
 Utils\ChangingStepSpeech.class
+StepDefinitions\WebSocketConfig.class
 Utils\FileDownloader.class
+Controller\RestController.class
 testDef\mi.class
 StepDefinitions\ApiStepDefinition.class
 Utils\ConvertToJson.class
-RunnerStarter\TestRunner.class
+RunnerStarter\UseCukeFromMainTest.class
 Utils\util.class

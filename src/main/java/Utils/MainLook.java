@@ -16,7 +16,7 @@ public class MainLook {
 
 	public static void main(String[] args) throws Exception {
 		//Algorithms test1 = new Algorithms();
-		//test1.extractionOfCucumberVariables("this is me I useed «generationOfRandomNames(8)» to be a very «environment.Testing Env.first URL» handsome man in «generationOfRandomNames(4)» a beautiful city");
+		//test1.extractionOfCucumberVariables("this is me I useed <<generationOfRandomNames(8)>> to be a very <<environment.Testing Env.first URL>> handsome man in <<generationOfRandomNames(4)>> a beautiful city");
 		//InitiateYaml test2 = new InitiateYaml();
 		//test2.initialization();
 		//genRandVar.getClass().getDeclaredMethod("generationOfRandomNames", null);

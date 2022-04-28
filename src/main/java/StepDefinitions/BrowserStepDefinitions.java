@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -20,7 +19,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -49,11 +47,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.testng.Reporter;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Runner.SprApp;
@@ -96,6 +92,7 @@ public class BrowserStepDefinitions {
 	public Allure allure = null;
 	public String speech = "";
 
+	
 	@AfterClass
 	@After
 	public void closingSetup() {
