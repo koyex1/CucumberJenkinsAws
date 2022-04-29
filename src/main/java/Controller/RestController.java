@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -17,6 +18,7 @@ public class RestController {
 	@Lazy
 	SimpMessagingTemplate template ;
 	
+	@CrossOrigin(origins = {"http://localhost:3000", "http://someserver:8080"})
 	@GetMapping("/start/{key}")
 	public void sendKey(@PathVariable String key) {
 		System.out.println("key should be displaying now11");
@@ -25,6 +27,7 @@ public class RestController {
 		template.convertAndSend("/topic/log", "Hello");
 	}
 	
+	@CrossOrigin(origins = {"http://localhost:3000", "http://someserver:8080"})
 	@Scheduled(fixedRate = 10)
 	public void start() {
 		//System.out.println("key should be displaying now22");
