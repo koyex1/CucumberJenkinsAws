@@ -29,6 +29,6 @@ public class SprApp {
 		System.out.println("I hope I see you");
 		System.out.println(DTO.keyValue);
 		Main.main(new String[] { "-g", "StepDefinitions",
-				"src\\test\\resources\\Features\\" + DTO.keyValue + ".feature" });
+				"src\\main\\resources\\Features\\" + DTO.keyValue + ".feature" });
 	}
 }
