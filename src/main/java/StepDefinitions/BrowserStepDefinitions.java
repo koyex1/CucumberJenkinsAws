@@ -135,7 +135,7 @@ public class BrowserStepDefinitions {
 		System.out.println("Passed or failed");
 		System.out.println("for passed");
 		System.out.println(scenario.isFailed());
-		scenario.getStatus().name();
+		System.out.println(scenario.getStatus().name());
 
 		
 		if(false) {
