@@ -18,7 +18,7 @@ public class RestController {
 	@Lazy
 	SimpMessagingTemplate template ;
 	
-	@CrossOrigin(origins = {"*"})
+	@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8080"})
 	@GetMapping("/start/{key}")
 	public void sendKey(@PathVariable String key) {
 		System.out.println("key should be displaying now11");
@@ -27,7 +27,7 @@ public class RestController {
 		template.convertAndSend("/topic/log", "Hello");
 	}
 	
-	@CrossOrigin(origins = {"*"})
+	@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8080"})
 	@Scheduled(fixedRate = 10)
 	public void start() {
 		//System.out.println("key should be displaying now22");
