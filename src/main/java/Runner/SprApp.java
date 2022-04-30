@@ -25,7 +25,7 @@ public class SprApp {
 		// take note of this 5seconds and implement this 5 seconds delay on my frontend
 		// post request that sends the key to backend
 		// then put a delay in backend to
-		Thread.sleep(10000);
+		Thread.sleep(20000);
 		System.out.println("I hope I see you");
 		System.out.println(DTO.keyValue);
 		Main.main(new String[] { "-g", "StepDefinitions",
