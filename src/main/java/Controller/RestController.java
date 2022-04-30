@@ -29,7 +29,6 @@ public class RestController {
 	@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8080"})
 	@Scheduled(fixedRate = 2000)
 	public void start() {
-		System.out.println(DTO.log);
 		template.convertAndSend("/topic/log", DTO.log.toArray(new String[DTO.log.size()]));
 	}
 	
