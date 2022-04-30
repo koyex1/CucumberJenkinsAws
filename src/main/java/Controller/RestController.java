@@ -29,7 +29,7 @@ public class RestController {
 	@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8080"})
 	@Scheduled(fixedRate = 10)
 	public void start() {
-		//System.out.println("key should be displaying now22");
+		System.out.println("key should be displaying now22");
 		template.convertAndSend("/topic/log", DTO.log.toArray(new String[DTO.log.size()]));
 	}
 	
