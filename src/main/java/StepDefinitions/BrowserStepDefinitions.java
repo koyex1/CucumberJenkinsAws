@@ -131,6 +131,35 @@ public class BrowserStepDefinitions {
 		DTO.debugLog.add(DTO.runningMessage);
 		DTO.debugLog.add(DTO.runningDefinedMessage);
 		System.out.println(DTO.log);
+		
+		
+		if(!scenario.isFailed()) {
+			System.out.println("bullshit.................................................ontest timeout failure");
+			System.out.println("please in the name of God print when it fails");
+			onfailure.getScreenshot(driver);
+	
+			
+
+			// writing into text for debug log
+			DTO.debugLog.add(failure.getFailureMessage(scenario));
+			FileWriter writer = new FileWriter(
+					"C:\\Users\\olu\\react\\automationcontrol\\src\\logReport\\logReport.txt");
+			for (String str : DTO.debugLog) {
+				writer.write(str + "\n");
+			}
+			writer.close();
+
+			FileWriter writer2 = new FileWriter(
+					"C:\\Users\\olu\\react\\automationcontrol\\src\\logReport\\logReport.html");
+			writer2.write("<body>\n");
+			for (String str : DTO.debugLog) {
+				writer2.write(str + "<br>\n");
+			}
+			writer2.write("</body>");
+			writer2.close();
+			
+			this.AllureDetails(scenario);
+		}
 
 		if (scenario.isFailed()) {
 			System.out.println("bullshit.................................................ontest timeout failure");

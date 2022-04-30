@@ -24,7 +24,6 @@ public class RestController {
 		System.out.println("key should be displaying now11");
 		System.out.println(key);
 		DTO.keyValue = key;
-		template.convertAndSend("/topic/log", "Hello");
 	}
 	
 	@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8080"})
