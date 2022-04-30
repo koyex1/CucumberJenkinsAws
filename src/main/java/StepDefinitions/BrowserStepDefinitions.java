@@ -105,7 +105,14 @@ public class BrowserStepDefinitions {
 
 	@After
 	public void ifPassed(Scenario scenario) throws IOException {
+		
 		if(scenario.isFailed()) {
+			DTO.log.add("Failed");
+		}
+		
+		
+		if(!scenario.isFailed()) {
+			DTO.log.add("Passed");
 			System.out.println("checking if this actually works");
 			onfailure.getScreenshot(driver);
 	
@@ -160,14 +167,6 @@ public class BrowserStepDefinitions {
 		DTO.debugLog.add(DTO.runningDefinedMessage);
 		System.out.println(DTO.log);
 		
-		System.out.println("Passed or failed");
-		System.out.println("for passed");
-		System.out.println(scenario.isFailed());
-		System.out.println(scenario.getStatus().compareTo(scenario.getStatus().FAILED));
-		scenario.log("fdjskljdlkjkjkljlkj");
-		
-		
-
 		if (scenario.isFailed()) {
 			System.out.println("bullshit.................................................ontest timeout failure");
 			System.out.println("please in the name of God print when it fails");
