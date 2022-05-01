@@ -28,7 +28,6 @@ public class SprApp {
 		DTO.log.add("Waiting for Test to start...");
 		System.out.println("before");
 		while(DTO.keyValue == null) {
-			System.out.println("in");
 		};
 		System.out.println("after");
 		DTO.log.remove(0);
