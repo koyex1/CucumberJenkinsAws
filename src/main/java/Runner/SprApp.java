@@ -28,9 +28,7 @@ public class SprApp {
 		DTO.log.add("Waiting for Test to start...");
 		System.out.println("before");
 		String after = null;
-		while(DTO.keyValue == null) {
-			 after="after";
-		};
+		Thread.sleep(20000);
 		System.out.println(after);
 		DTO.log.remove(0);
 		DTO.log.add("Test Started");
