@@ -25,9 +25,8 @@ public class SprApp {
 		// take note of this 5seconds and implement this 5 seconds delay on my frontend
 		// post request that sends the key to backend
 		// then put a delay in backend to
-		DTO.log.add("Waiting for Test to start");
+		DTO.log.add("Waiting for Test to start...");
 		while(DTO.keyValue == null) {
-			System.out.println("waiting for request from frontend...");
 		};
 		DTO.log.remove(0);
 		DTO.log.add("Test Started");
