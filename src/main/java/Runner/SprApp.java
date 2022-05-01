@@ -27,14 +27,12 @@ public class SprApp {
 		// then put a delay in backend to
 		DTO.log.add("Waiting for Test to start...");
 		System.out.println("before");
-		
-		if(DTO.keyValue != null) {
+		while(DTO.keyValue == null) {};
 		System.out.println("after");
 		DTO.log.remove(0);
 		DTO.log.add("Test Started");
 		System.out.println(DTO.keyValue);
 		Main.main(new String[] { "-g", "StepDefinitions",
 				"src\\main\\resources\\Features\\" + DTO.keyValue + ".feature" });
-		};
 	}
 }
