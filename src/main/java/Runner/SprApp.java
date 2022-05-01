@@ -26,8 +26,11 @@ public class SprApp {
 		// post request that sends the key to backend
 		// then put a delay in backend to
 		DTO.log.add("Waiting for Test to start...");
+		System.out.println("before");
 		while(DTO.keyValue == null) {
+			System.out.println("in");
 		};
+		System.out.println("after");
 		DTO.log.remove(0);
 		DTO.log.add("Test Started");
 		System.out.println(DTO.keyValue);
