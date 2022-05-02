@@ -27,9 +27,8 @@ public class SprApp {
 		// then put a delay in backend to
 		DTO.log.add("Waiting for Test to start...");
 		System.out.println("before");
-		String after = null;
-		Thread.sleep(20000);
-		System.out.println(after);
+		//Thread.sleep(20000);
+		while(DTO.keyValue == null)continue;
 		DTO.log.remove(0);
 		DTO.log.add("Test Started");
 		System.out.println(DTO.keyValue);
