@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -131,7 +132,8 @@ public class BrowserStepDefinitions {
 					"C:\\Users\\olu\\react\\automationcontrol\\src\\logReport\\logReport.html");
 			writer2.write("<body>\n");
 			for (String str : DTO.debugLog) {
-				writer2.write(str + "<br>\n");
+				byte[] bytes = str.getBytes(StandardCharsets.UTF_8);
+				writer2.write(new String(bytes, StandardCharsets.UTF_8) + "<br>\n");
 			}
 			writer2.write("</body>");
 			writer2.close();
