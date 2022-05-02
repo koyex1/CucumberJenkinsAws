@@ -185,7 +185,8 @@ public class BrowserStepDefinitions {
 			FileWriter writer = new FileWriter(
 					"C:\\Users\\olu\\react\\automationcontrol\\src\\logReport\\logReport.txt");
 			for (String str : DTO.debugLog) {
-				writer.write(str + "\n");
+				byte[] bytes = str.getBytes(StandardCharsets.UTF_8);
+				writer.write(new String(bytes, StandardCharsets.UTF_8) + "<br>\n");
 			}
 			writer.close();
 
