@@ -13,7 +13,7 @@ import org.yaml.snakeyaml.constructor.Constructor;
 public class InitiateYaml {
 	
 	public String initialization(List<String> envKeys) throws FileNotFoundException {
-		InputStream inputStream = new FileInputStream(new File("src\\test\\java\\environmentVariables.yaml"));
+		InputStream inputStream = new FileInputStream(new File("src\\main\\java\\environmentVariables.yaml"));
 
 		//Yaml yaml = new Yaml(new Constructor(EnvData.class));
 		//EnvData data = yaml.load(inputStream);
