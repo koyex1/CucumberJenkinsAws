@@ -94,16 +94,8 @@ public class BrowserStepDefinitions {
 	public String speech = "";
 
 	
+	
 	@AfterClass
-	@After
-	public void closingSetup() {
-
-		if (driver != null) {
-			driver.quit();
-		}
-
-	}
-
 	@After
 	public void ifPassed(Scenario scenario) throws IOException, InterruptedException {
 		
@@ -141,6 +133,9 @@ public class BrowserStepDefinitions {
 			
 			this.AllureDetails(scenario);
 			Thread.sleep(2000);
+			if (driver != null) {
+				driver.quit();
+			}
 		}
 	}
 
