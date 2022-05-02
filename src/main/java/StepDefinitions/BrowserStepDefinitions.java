@@ -105,10 +105,11 @@ public class BrowserStepDefinitions {
 	}
 
 	@After
-	public void ifPassed(Scenario scenario) throws IOException {
+	public void ifPassed(Scenario scenario) throws IOException, InterruptedException {
 		
 		if(scenario.isFailed()) {
 			DTO.log.add("Failed");
+			Thread.sleep(2000);
 		}
 		
 		
@@ -139,6 +140,7 @@ public class BrowserStepDefinitions {
 			writer2.close();
 			
 			this.AllureDetails(scenario);
+			Thread.sleep(2000);
 		}
 	}
 
