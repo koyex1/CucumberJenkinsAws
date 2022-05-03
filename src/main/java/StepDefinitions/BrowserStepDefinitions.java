@@ -241,7 +241,7 @@ public class BrowserStepDefinitions {
 		} else {
 			driver = new ChromeDriver();
 		}
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		windowName = "launchWindow";
 		windowKeyValue.put(windowName, driver.getWindowHandle());
@@ -515,12 +515,12 @@ public class BrowserStepDefinitions {
 		WebElement clickOn = driver.findElement(By.xpath(elementXpath1));
 
 		try {
-			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Integer.valueOf(time), TimeUnit.SECONDS);
 			driver.findElement(By.xpath(elementXpath2));
 			shownYet = true;
 		} catch (Exception e) {
 			shownYet = false;
-			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 			clickOn.click();
 		}
 		if (shownYet == false) {
