@@ -20,6 +20,6 @@ And "«downloadContent»" should contain "Ciceronem"
 Given DB host "«environment.Testing Env.DB-parameters.host»" port "«environment.Testing Env.DB-parameters.port»" dbName "«environment.Testing Env.DB-parameters.dbName»" user "«environment.Testing Env.DB-parameters.user»" password "«environment.Testing Env.DB-parameters.password»"
 When I execute the query 'SELECT firstName FROM testdatabase.student'
 Then I store the result in "result" as string
-And "result" should contain "Olumide"
+And "«result»" should contain "Olumide"
 
 #generateRandomNumbers(int num) generates a number from 1 to num
