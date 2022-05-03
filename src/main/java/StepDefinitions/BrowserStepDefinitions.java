@@ -111,9 +111,6 @@ public class BrowserStepDefinitions {
 		if(!scenario.isFailed()) {
 			DTO.log.add("Passed");
 			System.out.println("checking if this actually works");
-			onfailure.getScreenshot(driver);
-	
-			
 
 			// writing into text for debug log
 			DTO.debugLog.add(failure.getFailureMessage(scenario));
@@ -170,6 +167,8 @@ public class BrowserStepDefinitions {
 		if (scenario.isFailed()) {
 			System.out.println("bullshit.................................................ontest timeout failure");
 			System.out.println("please in the name of God print when it fails");
+			
+			if(driver !=null) {
 			onfailure.getScreenshot(driver);
 			String htmlSourceCode = driver.getPageSource();
 			// writing into html file for failed page source code
@@ -177,7 +176,7 @@ public class BrowserStepDefinitions {
 					"C:\\Users\\olu\\react\\automationcontrol\\src\\HtmlSourceCode\\failedHtmlCode.html");
 			fWriter.write(htmlSourceCode);
 			fWriter.close();
-
+			}
 			// writing into text for debug log
 			DTO.debugLog.add(failure.getFailureMessage(scenario));
 			FileWriter writer = new FileWriter(

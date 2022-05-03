@@ -19,9 +19,11 @@ public class FuncEnv {
 
 	}
 	
-	public int generateRandomNumbers(int upperbound) {
+	public String generateRandomNumbers(int upperbound) {
 		Random rand = new Random();
-		return rand.nextInt(upperbound+1);
+		int randomVal= rand.nextInt(upperbound+1);
+		return String.valueOf(randomVal);
+		
 
 	}
 }
