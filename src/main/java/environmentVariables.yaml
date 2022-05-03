@@ -16,3 +16,5 @@ elements:
      'login Button': '//div[@title ="dance"]'
      'Div element field': '//div'
      'username field': '//input[@id="username"]'
+     'signIn button': '//a[@id="log-in"]'
+     'search field': '(//input[contains(@placeholder, "search")])[1]'
