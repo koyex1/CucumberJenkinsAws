@@ -340,7 +340,7 @@ public class BrowserStepDefinitions {
 		DTO.storeStrings.put(downloadVar, output);
 		System.out.println(DTO.storeStrings);
 		System.out.println(DTO.storeStrings.get(downloadVar));
-		DTO.runningMessage = speech + " I store its content in {" + downloadVar + "}";
+		DTO.runningDefinedMessage = speech + " I store its content in {" + downloadVar + "}";
 
 	}
 
