@@ -102,9 +102,7 @@ public class BrowserStepDefinitions {
 		if(scenario.isFailed()) {
 			DTO.log.add("Failed");
 			Thread.sleep(2000);
-			if (driver != null) {
-				driver.quit();
-			}
+			
 		}
 		
 		
@@ -133,6 +131,9 @@ public class BrowserStepDefinitions {
 			
 			this.AllureDetails(scenario);
 			Thread.sleep(2000);
+			if (driver != null) {
+				driver.quit();
+			}
 			
 		}
 	}
